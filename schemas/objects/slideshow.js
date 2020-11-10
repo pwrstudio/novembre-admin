@@ -25,6 +25,11 @@ export default {
             name: 'autoplay',
             type: 'boolean'
         },
+        {
+            title: 'No bottom margin',
+            name: 'noBottomMargin',
+            type: 'boolean'
+        },
     ],
     preview: {
         select: {

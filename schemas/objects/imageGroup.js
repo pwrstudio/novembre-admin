@@ -25,6 +25,11 @@ export default {
             ]
         },
         {
+            title: 'No bottom margin',
+            name: 'noBottomMargin',
+            type: 'boolean'
+        },
+        {
             title: 'Alignment',
             name: 'alignment',
             type: 'string',

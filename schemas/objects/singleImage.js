@@ -16,6 +16,11 @@ export default {
             },
         },
         {
+            title: 'No bottom margin',
+            name: 'noBottomMargin',
+            type: 'boolean'
+        },
+        {
             title: 'Full-width',
             name: 'fullwidth',
             type: 'boolean'
