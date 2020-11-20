@@ -189,6 +189,12 @@ export default {
           ]
         }
       ]
+    },
+    // AD TAG
+    {
+      title: 'Ad tag',
+      name: 'adTag',
+      type: 'text',
     }
   ],
   preview: {
