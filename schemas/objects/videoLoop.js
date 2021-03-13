@@ -1,4 +1,7 @@
-import Repeat from "react-icons/lib/md/repeat"
+// ICONS
+import {
+    MdRepeat
+  } from "react-icons/md"
 import VideoPreview from '../../components/VideoPreview'
 
 
@@ -6,7 +9,7 @@ export default {
     type: 'object',
     name: 'videoLoop',
     title: 'Video clip',
-    icon: Repeat,
+    icon: MdRepeat,
     fields: [
         {
             title: 'Video',

@@ -1,11 +1,14 @@
-import Image from "react-icons/lib/md/photo-size-select-actual"
+// ICONS
+import {
+    MdPhotoSizeSelectActual
+  } from "react-icons/md"
 import SingleImagePreview from '../../components/SingleImagePreview'
 
 export default {
     type: 'object',
     name: 'singleImage',
     title: 'Single Image',
-    icon: Image,
+    icon: MdPhotoSizeSelectActual,
     fields: [
         {
             title: 'Image',
@@ -19,6 +22,11 @@ export default {
             title: 'No bottom margin',
             name: 'noBottomMargin',
             type: 'boolean'
+        },
+        {
+            title: 'Link',
+            name: 'linkUrl',
+            type: 'url'
         },
         {
             title: 'Full-width',

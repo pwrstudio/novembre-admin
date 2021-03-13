@@ -3,7 +3,7 @@ import IntroductionText from '../editor/IntroductionText'
 import NormalText from '../editor/NormalText'
 import SmallText from '../editor/SmallText'
 import InterviewQuestion from '../editor/InterviewQuestion'
-
+import striptags from 'striptags'
 
 export default {
   title: 'Article',
@@ -173,6 +173,9 @@ export default {
         },
         {
           type: 'audio'
+        },
+        {
+          type: 'arbitraryEmbed'
         }
       ]
     },
@@ -214,9 +217,11 @@ export default {
       //     image = preview[0].images[0]
       //   }
       // }
+
       const formattedDate = date ? date.substring(0, 10) : 'No date set'
+      const strippedTitle = striptags(title)
       return {
-        title: title,
+        title: strippedTitle,
         description: formattedDate,
         subtitle: editorialState.toUpperCase(),
         media: image

@@ -1,11 +1,14 @@
-import Volume from "react-icons/lib/md/volume-up"
+// ICONS
+import {
+    MdVolumeUp
+  } from "react-icons/md"
 import AudioPreview from '../../components/AudioPreview'
 
 export default {
     type: 'object',
     name: 'audio',
     title: 'Audio',
-    icon: Volume,
+    icon: MdVolumeUp,
     fields: [
         {
             title: 'Audio',

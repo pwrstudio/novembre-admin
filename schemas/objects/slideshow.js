@@ -1,11 +1,14 @@
-import Slideshow from "react-icons/lib/md/view-carousel"
+// ICONS
+import {
+    MdViewCarousel
+  } from "react-icons/md"
 import ImageGroupPreview from '../../components/ImageGroupPreview'
 
 export default {
     type: 'object',
     name: 'slideshow',
     title: 'slidehow',
-    icon: Slideshow,
+    icon: MdViewCarousel,
     fields: [
         {
             title: 'Images',

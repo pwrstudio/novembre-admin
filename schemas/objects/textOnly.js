@@ -1,10 +1,13 @@
-import Title from "react-icons/lib/md/title"
+// ICONS
+import {
+    MdTitle
+  } from "react-icons/md"
 
 export default {
     type: 'object',
     name: 'textOnly',
     title: 'Text only',
-    icon: Title,
+    icon: MdTitle,
     fields: [
         {
             title: 'Use title',

@@ -1,11 +1,15 @@
 import S from "@sanity/desk-tool/structure-builder";
-import Home from "react-icons/lib/md/home"
-import Work from "react-icons/lib/md/work"
-import ImportContacts from "react-icons/lib/md/import-contacts"
-import MyLocation from "react-icons/lib/md/my-location"
-import ShoppingCart from "react-icons/lib/md/shopping-cart"
 
-import MMS from "react-icons/lib/md/mms"
+// ICONS
+import {
+    MdHome,
+    MdWork,
+    MdImportContacts,
+    MdShoppingCart,
+    MdMms,
+    MdMyLocation,
+    MdFlare
+  } from "react-icons/md"
 
 
 export default () =>
@@ -14,7 +18,7 @@ export default () =>
         .items([
             S.listItem()
                 .title("About & contact")
-                .icon(Home)
+                .icon(MdHome)
                 .child(
                     S.editor()
                         .id('config')
@@ -24,7 +28,7 @@ export default () =>
             S.divider(),
             S.listItem()
                 .title('Magazine')
-                .icon(ImportContacts)
+                .icon(MdImportContacts)
                 .child(
                     S.documentList()
                         .title('Magazine articles')
@@ -35,7 +39,7 @@ export default () =>
                 ),
             S.listItem()
                 .title('Bureau')
-                .icon(Work)
+                .icon(MdWork)
                 .child(
                     S.documentList()
                         .title('Bureau articles')
@@ -46,19 +50,28 @@ export default () =>
                 ),
             S.listItem()
                 .title('Shop')
-                .icon(ShoppingCart)
+                .icon(MdShoppingCart)
                 .child(
                     S.documentList()
                         .title('Products')
                         .showIcons(true)
                         .filter('_type == $type')
                         .params({ type: 'product' })
-
+                ),
+            S.listItem()
+                .title('Satellites')
+                .icon(MdFlare)
+                .child(
+                    S.documentList()
+                        .title('Satellite sites')
+                        .showIcons(true)
+                        .filter('_type == $type')
+                        .params({ type: 'satelliteSite' })
                 ),
             S.divider(),
             S.listItem()
                 .title('Stockists')
-                .icon(MyLocation)
+                .icon(MdMyLocation)
                 .child(
                     S.documentList()
                         .title('Stockists')
@@ -68,7 +81,7 @@ export default () =>
             S.divider(),
             S.listItem()
                 .title("Banners")
-                .icon(MMS)
+                .icon(MdMms)
                 .child(
                     S.documentList()
                         .title('Stockists')

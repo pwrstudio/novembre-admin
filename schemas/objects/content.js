@@ -47,7 +47,10 @@ export default {
                 },
                 {
                     type: 'audio'
-                }
+                },
+                {
+                    type: 'arbitraryEmbed'
+                },
             ]
         },
     ]

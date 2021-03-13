@@ -1,13 +1,15 @@
 import ImageGroupPreview from '../../components/ImageGroupPreview'
-import ImageGroupIcon from "react-icons/lib/md/photo-album"
-
+// ICONS
+import {
+    MdPhotoAlbum
+  } from "react-icons/md"
 
 export default {
     type: 'object',
     name: 'imageGroup',
     title: 'Image(s)',
     description: 'Show up to four images in a horizontal layout',
-    icon: ImageGroupIcon,
+    icon: MdPhotoAlbum,
     // validation: Rule => Rule.max(4),
     fields: [
         {
@@ -28,6 +30,11 @@ export default {
             title: 'No bottom margin',
             name: 'noBottomMargin',
             type: 'boolean'
+        },
+        {
+            title: 'Link',
+            name: 'linkUrl',
+            type: 'url'
         },
         {
             title: 'Alignment',

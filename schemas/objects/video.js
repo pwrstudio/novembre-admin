@@ -1,10 +1,13 @@
-import VideoCam from "react-icons/lib/md/videocam"
+// ICONS
+import {
+    MdVideocam
+  } from "react-icons/md"
 
 export default {
     type: 'object',
     name: 'video',
     title: 'Embeded video',
-    icon: VideoCam,
+    icon: MdVideocam,
     fields: [
         {
             title: 'Video',
