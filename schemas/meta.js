@@ -41,6 +41,11 @@ export default {
             type: 'content'
         },
         {
+            title: 'Digest',
+            name: 'digest',
+            type: 'content'
+        },
+        {
             title: 'Social Media',
             name: 'socialMedia',
             type: 'content'
