@@ -26,8 +26,6 @@ import arbitraryEmbed from './objects/ArbitraryEmbed'
 import audio from './objects/audio'
 import videoLoop from './objects/videoLoop'
 
-
-
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([meta, videoLoop, arbitraryEmbed, article, product, stockist, content, related, general, slideshow, textOnly, singleImage, imageGroup, audio, video, previewColors, banner, satelliteSite])
