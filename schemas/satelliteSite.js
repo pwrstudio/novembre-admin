@@ -103,6 +103,9 @@ export default {
                     type: 'imageGroup',
                 },
                 {
+                    type: 'thumbnailGroup',
+                },
+                {
                     type: 'videoLoop',
                 },
                 {
@@ -110,6 +113,9 @@ export default {
                 },
                 {
                     type: 'slideshow',
+                },
+                {
+                    type: 'flipshow',
                 },
                 {
                     type: 'audio',

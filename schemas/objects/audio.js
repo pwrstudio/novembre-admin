@@ -1,7 +1,7 @@
 // ICONS
 import {
     MdVolumeUp
-  } from "react-icons/md"
+} from "react-icons/md"
 import AudioPreview from '../../components/AudioPreview'
 
 export default {
@@ -39,6 +39,16 @@ export default {
             title: 'Foreground Color',
             name: 'foregroundColor',
             type: 'color',
+        },
+        {
+            title: 'Autoplay',
+            name: 'autoplay',
+            type: 'boolean'
+        },
+        {
+            title: 'Hidden',
+            name: 'hidden',
+            type: 'boolean'
         },
     ],
     preview: {

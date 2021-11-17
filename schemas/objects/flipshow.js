@@ -1,14 +1,14 @@
 // ICONS
 import {
-    MdViewCarousel
+    MdAutoStories
 } from "react-icons/md"
 // import ImageGroupPreview from '../../components/ImageGroupPreview'
 
 export default {
     type: 'object',
-    name: 'slideshow',
-    title: 'Slideshow',
-    icon: MdViewCarousel,
+    name: 'flipshow',
+    title: 'Flipshow',
+    icon: MdAutoStories,
     fields: [
         {
             title: 'Images',
@@ -22,11 +22,6 @@ export default {
                     },
                 }
             ]
-        },
-        {
-            title: 'Autoplay',
-            name: 'autoplay',
-            type: 'boolean'
         },
         {
             title: 'No bottom margin',

@@ -1,14 +1,16 @@
+import ImageGroupPreview from '../../components/ImageGroupPreview'
 // ICONS
 import {
-    MdViewCarousel
+    MdApps
 } from "react-icons/md"
-// import ImageGroupPreview from '../../components/ImageGroupPreview'
 
 export default {
     type: 'object',
-    name: 'slideshow',
-    title: 'Slideshow',
-    icon: MdViewCarousel,
+    name: 'thumbnailGroup',
+    title: 'Small images',
+    description: 'Show group of small images',
+    icon: MdApps,
+    // validation: Rule => Rule.max(4),
     fields: [
         {
             title: 'Images',
@@ -24,20 +26,28 @@ export default {
             ]
         },
         {
-            title: 'Autoplay',
-            name: 'autoplay',
-            type: 'boolean'
-        },
-        {
             title: 'No bottom margin',
             name: 'noBottomMargin',
             type: 'boolean'
         },
+        {
+            title: 'Background Color',
+            name: 'backgroundColor',
+            type: 'color',
+        },
+        {
+            type: 'text',
+            name: 'caption',
+            title: 'Caption'
+        },
+
     ],
     // preview: {
     //     select: {
-    //         images: 'images'
+    //         images: 'images',
+    //         backgroundColor: 'backgroundColor'
     //     },
     //     component: ImageGroupPreview
-    // }
+    // },
 }
+

@@ -2,7 +2,7 @@ import ImageGroupPreview from '../../components/ImageGroupPreview'
 // ICONS
 import {
     MdPhotoAlbum
-  } from "react-icons/md"
+} from "react-icons/md"
 
 export default {
     type: 'object',
@@ -73,12 +73,12 @@ export default {
         },
 
     ],
-    preview: {
-        select: {
-            images: 'images',
-            backgroundColor: 'backgroundColor'
-        },
-        component: ImageGroupPreview
-    },
+    // preview: {
+    //     select: {
+    //         images: 'images',
+    //         backgroundColor: 'backgroundColor'
+    //     },
+    //     component: ImageGroupPreview
+    // },
 }
 
