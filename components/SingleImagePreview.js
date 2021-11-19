@@ -25,7 +25,7 @@ export default class SingleImage extends React.Component {
         }
         return (
             <div style={{ display: 'inline-flex', minHeight: '100px', justifyContent: align, width: '100%', padding: '40px', background: bgColor, border: '0', borderRadius: '0px' }}>
-                {value.image ? <img src={imageBuilder
+                {value.image && value.image.asset ? <img src={imageBuilder
                     .image(value.image)
                     .height(200)
                     .quality(100)

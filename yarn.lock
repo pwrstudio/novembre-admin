@@ -1153,16 +1153,16 @@
     prop-types "^15.6.0"
     rxjs "^6.5.3"
 
-"@sanity/desk-tool@^2.22.1":
-  version "2.22.1"
-  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.22.1.tgz#e74cdc6284a54245a168fc406e6e785f41e22d45"
+"@sanity/desk-tool@^2.22.2":
+  version "2.22.2"
+  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.22.2.tgz#ef4a8b424e290e75ab6130a70db28432c8113c34"
   dependencies:
     "@reach/auto-id" "^0.13.2"
     "@sanity/client" "2.21.10"
     "@sanity/data-aspects" "2.18.0"
     "@sanity/diff" "2.20.0"
     "@sanity/field" "2.22.0"
-    "@sanity/form-builder" "2.22.1"
+    "@sanity/form-builder" "2.22.2"
     "@sanity/generate-help-url" "2.18.0"
     "@sanity/icons" "^1.2.1"
     "@sanity/react-hooks" "2.22.0"
@@ -1230,9 +1230,9 @@
     lodash "^4.17.15"
     sanity-diff-patch "^1.0.9"
 
-"@sanity/form-builder@2.22.1":
-  version "2.22.1"
-  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-2.22.1.tgz#a696832917bf0c570b67e47c858523461de1011c"
+"@sanity/form-builder@2.22.2":
+  version "2.22.2"
+  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-2.22.2.tgz#443f7518b539b5ee24c5e4280a0d977503aeaa8c"
   dependencies:
     "@reach/auto-id" "^0.13.2"
     "@sanity/base" "2.22.0"
@@ -1644,8 +1644,8 @@
   resolved "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
 
 "@types/node@*":
-  version "16.11.7"
-  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.7.tgz#36820945061326978c42a01e56b61cd223dfdc42"
+  version "16.11.9"
+  resolved "https://registry.npmjs.org/@types/node/-/node-16.11.9.tgz#879be3ad7af29f4c1a5c433421bf99fab7047185"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1676,8 +1676,8 @@
   resolved "https://registry.npmjs.org/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
 
 "@types/uuid@^8.0.0":
-  version "8.3.1"
-  resolved "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
+  version "8.3.3"
+  resolved "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.3.tgz#c6a60686d953dbd1b1d45e66f4ecdbd5d471b4d0"
 
 "@types/warning@^3.0.0":
   version "3.0.0"
@@ -3089,8 +3089,8 @@ dataloader@^2.0.0:
   resolved "https://registry.npmjs.org/dataloader/-/dataloader-2.0.0.tgz#41eaf123db115987e21ca93c005cd7753c55fe6f"
 
 date-fns@^2.16.1:
-  version "2.25.0"
-  resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.25.0.tgz#8c5c8f1d958be3809a9a03f4b742eba894fc5680"
+  version "2.26.0"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.26.0.tgz#fa45305543c392c4f914e50775fd2a4461e60fbd"
 
 date-now@1.0.1:
   version "1.0.1"
@@ -3306,8 +3306,8 @@ ee-first@1.1.1:
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.896:
-  version "1.3.900"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.900.tgz#5be2c5818a2a012c511b4b43e87b6ab7a296d4f5"
+  version "1.3.903"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.903.tgz#e2d3c3809f4ef05fdbe5cc88969dfc94b1bd15b9"
 
 element-resize-detector@^1.1.14:
   version "1.2.3"
@@ -3899,8 +3899,8 @@ fragment-cache@^0.2.1:
     map-cache "^0.2.2"
 
 framer-motion@^5.0.0:
-  version "5.3.0"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-5.3.0.tgz#22956eebab7a14032b3467a76822b946f8ff9bd0"
+  version "5.3.1"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-5.3.1.tgz#5588f904f16b20a617f112ee2b10573e7392c488"
   dependencies:
     framesync "6.0.1"
     hey-listen "^1.0.8"
@@ -7517,8 +7517,8 @@ side-channel@^1.0.4:
     object-inspect "^1.9.0"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
-  version "3.0.5"
-  resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.5.tgz#9e3e8cc0c75a99472b44321033a7702e7738252f"
+  version "3.0.6"
+  resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
 
 simple-concat@^1.0.0:
   version "1.0.1"
@@ -7602,8 +7602,8 @@ source-map-resolve@^0.5.0:
     urix "^0.1.0"
 
 source-map-support@^0.5.16, source-map-support@~0.5.20:
-  version "0.5.20"
-  resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.20.tgz#12166089f8f5e5e8c56926b377633392dd2cb6c9"
+  version "0.5.21"
+  resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"

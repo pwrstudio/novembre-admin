@@ -20,6 +20,32 @@ export default {
             validation: Rule => Rule.required()
         },
         {
+            title: 'Landing page',
+            name: 'landing',
+            type: 'object',
+            options: {
+                collapsible: true,
+                collapsed: false
+            },
+            fields: [
+                {
+                    title: 'Enable landing page',
+                    name: 'enabled',
+                    type: 'boolean'
+                },
+                {
+                    title: 'Show title',
+                    name: 'showTitle',
+                    type: 'boolean'
+                },
+                {
+                    title: 'Image',
+                    name: 'landingImage',
+                    type: 'image',
+                }
+            ]
+        },
+        {
             title: 'Header',
             name: 'header',
             type: 'object',
