@@ -1,7 +1,13 @@
+// ICONS
+import {
+    MdDescription
+} from "react-icons/md"
+
 // CONTENT
 export default {
     type: 'object',
     name: 'content',
+    icon: MdDescription,
     title: 'Content',
     options: { collapsible: true, collapsed: true },
     fields: [

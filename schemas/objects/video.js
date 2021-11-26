@@ -27,14 +27,14 @@ export default {
             }
         },
         {
-            title: 'Background Color',
-            name: 'backgroundColor',
-            type: 'color',
-        },
-        {
             title: 'No bottom margin',
             name: 'noBottomMargin',
             type: 'boolean'
         },
+        {
+            title: 'Background Color',
+            name: 'backgroundColor',
+            type: 'color',
+        }
     ]
 }

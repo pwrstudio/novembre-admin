@@ -123,6 +123,9 @@ export default {
             type: 'array',
             of: [
                 {
+                    type: 'content',
+                },
+                {
                     type: 'singleImage',
                 },
                 {
@@ -145,9 +148,6 @@ export default {
                 },
                 {
                     type: 'audio',
-                },
-                {
-                    type: 'textOnly',
                 }
             ]
         },
