@@ -27,8 +27,9 @@ import audio from './objects/audio'
 import videoLoop from './objects/videoLoop'
 import thumbnailGroup from './objects/thumbnailGroup'
 import flipshow from './objects/flipshow'
+import map from './objects/map'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([meta, videoLoop, arbitraryEmbed, article, product, stockist, content, related, general, slideshow, textOnly, singleImage, imageGroup, audio, video, previewColors, banner, satelliteSite, thumbnailGroup, flipshow])
+  types: schemaTypes.concat([meta, videoLoop, arbitraryEmbed, article, product, stockist, content, related, general, slideshow, textOnly, singleImage, imageGroup, audio, video, previewColors, banner, satelliteSite, thumbnailGroup, flipshow, map])
 })

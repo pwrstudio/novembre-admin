@@ -65,9 +65,19 @@ export default {
                     type: 'boolean'
                 },
                 {
+                    title: 'Use "presents" layout',
+                    name: 'usePresentsLayout',
+                    type: 'boolean'
+                },
+                {
                     name: 'externalLogo',
                     title: 'External logo',
                     type: 'image',
+                },
+                {
+                    name: 'externalName',
+                    title: 'Name of external partner',
+                    type: 'string',
                 },
             ]
         },
@@ -148,6 +158,9 @@ export default {
                 },
                 {
                     type: 'audio',
+                },
+                {
+                    type: 'map',
                 }
             ]
         },
