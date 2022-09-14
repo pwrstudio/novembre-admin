@@ -54,30 +54,38 @@ export default {
                 collapsed: false
             },
             fields: [
+                // {
+                //     title: 'Show Novembre logo',
+                //     name: 'showNovembreLogo',
+                //     type: 'boolean'
+                // },
+                // {
+                //     title: 'Show title',
+                //     name: 'showTitle',
+                //     type: 'boolean'
+                // },
                 {
-                    title: 'Show Novembre logo',
-                    name: 'showNovembreLogo',
-                    type: 'boolean'
-                },
-                {
-                    title: 'Show title',
-                    name: 'showTitle',
-                    type: 'boolean'
-                },
-                {
-                    title: 'Use "presents" layout',
-                    name: 'usePresentsLayout',
+                    title: 'Showcase external logo',
+                    name: 'showExternalLogo',
                     type: 'boolean'
                 },
                 {
                     name: 'externalLogo',
                     title: 'External logo',
                     type: 'image',
+                    hidden: ({ parent }) => !parent?.showExternalLogo
+                },
+                {
+                    title: 'Use "Novembre presents:" layout',
+                    name: 'usePresentsLayout',
+                    type: 'boolean'
                 },
                 {
                     name: 'externalName',
                     title: 'Name of external partner',
+                    description: 'To be used in the "Novembre presents:" layout',
                     type: 'string',
+                    hidden: ({ parent }) => !parent?.usePresentsLayout
                 },
             ]
         },
