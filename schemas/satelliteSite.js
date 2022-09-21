@@ -20,6 +20,11 @@ export default {
             validation: Rule => Rule.required()
         },
         {
+            title: 'Use custom font',
+            name: 'customFont',
+            type: 'boolean'
+        },
+        {
             title: 'Landing page',
             name: 'landing',
             type: 'object',
@@ -78,6 +83,16 @@ export default {
                 {
                     title: 'Use "Novembre presents:" layout',
                     name: 'usePresentsLayout',
+                    type: 'boolean'
+                },
+                {
+                    title: 'Right corner: presented by (Novembre logo)',
+                    name: 'presentedByNovembre',
+                    type: 'boolean'
+                },
+                {
+                    title: 'Right corner: (Novembre logo) media partner"',
+                    name: 'novembreMediaPartner',
                     type: 'boolean'
                 },
                 {
