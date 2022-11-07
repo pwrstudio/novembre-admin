@@ -73,12 +73,12 @@ export default {
         },
 
     ],
-    // preview: {
-    //     select: {
-    //         images: 'images',
-    //         backgroundColor: 'backgroundColor'
-    //     },
-    //     component: ImageGroupPreview
-    // },
+    preview: {
+        select: {
+            images: 'images',
+            backgroundColor: 'backgroundColor'
+        },
+        component: ImageGroupPreview
+    },
 }
 

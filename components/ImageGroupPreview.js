@@ -15,10 +15,10 @@ export default class ImageGroup extends React.Component {
         const imageBuilder = imageUrlBuilder(sanityClient)
         return (
             <div style={{ minHeight: '100px', padding: '5px', background: bgColor, borderRadius: '0' }}>
-                {value.images ? value.images.map(image => <img src={imageBuilder
+                {value.images ? value.images.map(image => <img src={image.asset ? imageBuilder
                     .image(image)
                     .height(100)
-                    .url()} style={{ marginRight: '5px' }} />) : 'Empty'}
+                    .url() : ''} style={{ marginRight: '5px' }} />) : 'Empty'}
             </div>
         )
     }
