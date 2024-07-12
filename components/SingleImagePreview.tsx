@@ -1,0 +1,69 @@
+import imageUrlBuilder from '@sanity/image-url'
+import { useClient } from 'sanity'
+
+
+export const SingleImagePreview = (props: any) => {
+    const { value } = props
+    const sanityClient = useClient({ apiVersion: '2024-07-01' })
+
+    const imageBuilder = imageUrlBuilder(sanityClient)
+    console.dir(value)
+    const bgColor = value.backgroundColor ? value.backgroundColor.hex : '#f4f4f4'
+    let align = ''
+    if (value.alignment === 'left') {
+        align = 'flex-start'
+    } else if (value.alignment === 'right') {
+        align = 'flex-end'
+    } else {
+        align = 'center'
+    }
+    if (value.fullwidth) {
+        align = 'flex-start'
+    }
+    return (
+        <div style={{ display: 'inline-flex', minHeight: '100px', justifyContent: align, width: '100%', padding: '40px', background: bgColor, border: '0', borderRadius: '0px' }}>
+            {value.image && value.image.asset ? <img src={imageBuilder
+                .image(value.image)
+                .height(200)
+                .quality(100)
+                .url()} /> : 'No image selected'}
+            {/* <div>{value.caption}</div> */}
+        </div>
+    )
+}
+
+// import React from 'react'
+// import PropTypes from 'prop-types'
+
+// export default class SingleImage extends React.Component {
+//     static propTypes = {
+//         value: PropTypes.object
+//     }
+//     render() {
+//         const { value } = this.props
+//         const imageBuilder = imageUrlBuilder(sanityClient)
+//         console.dir(value)
+//         const bgColor = value.backgroundColor ? value.backgroundColor.hex : '#f4f4f4'
+//         let align = ''
+//         if (value.alignment === 'left') {
+//             align = 'flex-start'
+//         } else if (value.alignment === 'right') {
+//             align = 'flex-end'
+//         } else {
+//             align = 'center'
+//         }
+//         if (value.fullwidth) {
+//             align = 'flex-start'
+//         }
+//         return (
+//             <div style={{ display: 'inline-flex', minHeight: '100px', justifyContent: align, width: '100%', padding: '40px', background: bgColor, border: '0', borderRadius: '0px' }}>
+//                 {value.image && value.image.asset ? <img src={imageBuilder
+//                     .image(value.image)
+//                     .height(200)
+//                     .quality(100)
+//                     .url()} /> : 'No image selected'}
+//                 {/* <div>{value.caption}</div> */}
+//             </div>
+//         )
+//     }
+// }
