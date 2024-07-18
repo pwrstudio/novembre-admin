@@ -67,20 +67,37 @@ export default {
             ]
         },
         {
-            name: 'description',
-            title: 'Description',
+            title: 'Content',
+            name: 'content',
             type: 'array',
             of: [
                 {
-                    type: 'block'
+                    type: 'block',
+                    styles: [
+                        { title: 'Normal', value: 'normal' },
+                        { title: 'Introduction', value: 'introduction' },
+                        { title: 'Small text', value: 'small' },
+                        { title: 'Quote', value: 'blockquote' }
+                    ],
+                    lists: [],
+                    marks: {
+                        decorators: [
+                            { title: 'Emphasis', value: 'em' },
+                            { title: 'Strong', value: 'strong' }
+
+                        ],
+                        annotations: [
+                            {
+                                type: 'object',
+                                name: 'link',
+                                fields: [
+                                    { name: 'href', type: 'string', title: 'Url', validation: (Rule: any) => Rule.required() }
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
-
-        },
-        {
-            title: 'Content',
-            name: 'content',
-            type: 'content'
         },
         {
             title: 'Slug',

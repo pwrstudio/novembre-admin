@@ -1,5 +1,4 @@
 import { MdPhotoAlbum } from "react-icons/md"
-import { ImageGroupPreview } from '../../components/ImageGroupPreview'
 
 export default {
     type: 'object',
@@ -7,7 +6,6 @@ export default {
     title: 'Image(s)',
     description: 'Show up to four images in a horizontal layout',
     icon: MdPhotoAlbum,
-    // validation: (Rule: any) => Rule.max(4),
     fields: [
         {
             title: 'Images',
@@ -70,9 +68,6 @@ export default {
         },
 
     ],
-    component: {
-        preview: ImageGroupPreview
-    },
     preview: {
         select: {
             images: 'images',

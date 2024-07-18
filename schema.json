@@ -1868,66 +1868,6 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "imageGroup"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "thumbnailGroup"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "videoLoop"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "video"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
                   "name": "slideshow"
                 }
               },
@@ -1958,7 +1898,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "audio"
+                  "name": "map"
                 }
               },
               {
@@ -1973,7 +1913,67 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "map"
+                  "name": "thumbnailGroup"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "imageGroup"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "video"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "videoLoop"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "audio"
                 }
               }
             ]
@@ -2307,7 +2307,7 @@
         },
         "optional": true
       },
-      "description": {
+      "content": {
         "type": "objectAttribute",
         "value": {
           "type": "array",
@@ -2372,27 +2372,11 @@
                     },
                     {
                       "type": "string",
-                      "value": "h1"
+                      "value": "introduction"
                     },
                     {
                       "type": "string",
-                      "value": "h2"
-                    },
-                    {
-                      "type": "string",
-                      "value": "h3"
-                    },
-                    {
-                      "type": "string",
-                      "value": "h4"
-                    },
-                    {
-                      "type": "string",
-                      "value": "h5"
-                    },
-                    {
-                      "type": "string",
-                      "value": "h6"
+                      "value": "small"
                     },
                     {
                       "type": "string",
@@ -2406,16 +2390,7 @@
                 "type": "objectAttribute",
                 "value": {
                   "type": "union",
-                  "of": [
-                    {
-                      "type": "string",
-                      "value": "bullet"
-                    },
-                    {
-                      "type": "string",
-                      "value": "number"
-                    }
-                  ]
+                  "of": []
                 },
                 "optional": true
               },
@@ -2483,14 +2458,6 @@
               }
             }
           }
-        },
-        "optional": true
-      },
-      "content": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "inline",
-          "name": "content"
         },
         "optional": true
       },
@@ -2863,7 +2830,7 @@
                   },
                   "rest": {
                     "type": "inline",
-                    "name": "imageGroup"
+                    "name": "arbitraryEmbed"
                   }
                 },
                 {
@@ -2879,6 +2846,21 @@
                   "rest": {
                     "type": "inline",
                     "name": "slideshow"
+                  }
+                },
+                {
+                  "type": "object",
+                  "attributes": {
+                    "_key": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "rest": {
+                    "type": "inline",
+                    "name": "imageGroup"
                   }
                 },
                 {
@@ -2909,21 +2891,6 @@
                   "rest": {
                     "type": "inline",
                     "name": "audio"
-                  }
-                },
-                {
-                  "type": "object",
-                  "attributes": {
-                    "_key": {
-                      "type": "objectAttribute",
-                      "value": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "rest": {
-                    "type": "inline",
-                    "name": "arbitraryEmbed"
                   }
                 }
               ]
@@ -3546,6 +3513,36 @@
                 },
                 "rest": {
                   "type": "inline",
+                  "name": "slideshow"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "textOnly"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
                   "name": "singleImage"
                 }
               },
@@ -3577,36 +3574,6 @@
                 "rest": {
                   "type": "inline",
                   "name": "videoLoop"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "slideshow"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "textOnly"
                 }
               }
             ]
@@ -3854,7 +3821,7 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "imageGroup"
+                  "name": "slideshow"
                 }
               },
               {
@@ -3869,7 +3836,22 @@
                 },
                 "rest": {
                   "type": "inline",
-                  "name": "slideshow"
+                  "name": "arbitraryEmbed"
+                }
+              },
+              {
+                "type": "object",
+                "attributes": {
+                  "_key": {
+                    "type": "objectAttribute",
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rest": {
+                  "type": "inline",
+                  "name": "imageGroup"
                 }
               },
               {
@@ -3915,21 +3897,6 @@
                 "rest": {
                   "type": "inline",
                   "name": "audio"
-                }
-              },
-              {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "rest": {
-                  "type": "inline",
-                  "name": "arbitraryEmbed"
                 }
               }
             ]

@@ -9,7 +9,6 @@ import {
     MdFlare
 } from "react-icons/md"
 
-
 export default (S: any) =>
     S.list()
         .title("novembre.global")
@@ -33,7 +32,6 @@ export default (S: any) =>
                         .showIcons(true)
                         .filter('taxonomy.category == "magazine"')
                         .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
-
                 ),
             S.listItem()
                 .title('Bureau')
@@ -43,7 +41,7 @@ export default (S: any) =>
                         .title('Bureau articles')
                         .showIcons(true)
                         .filter('taxonomy.category == "bureau"')
-                        .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
+                    // .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
 
                 ),
             S.listItem()

@@ -326,21 +326,21 @@ export type SatelliteSite = {
     _key: string;
   } & SingleImage) | ({
     _key: string;
-  } & ImageGroup) | ({
-    _key: string;
-  } & ThumbnailGroup) | ({
-    _key: string;
-  } & VideoLoop) | ({
-    _key: string;
-  } & Video) | ({
-    _key: string;
   } & Slideshow) | ({
     _key: string;
   } & Flipshow) | ({
     _key: string;
-  } & Audio) | ({
+  } & Map) | ({
     _key: string;
-  } & Map)>;
+  } & ThumbnailGroup) | ({
+    _key: string;
+  } & ImageGroup) | ({
+    _key: string;
+  } & Video) | ({
+    _key: string;
+  } & VideoLoop) | ({
+    _key: string;
+  } & Audio)>;
   slug?: Slug;
 };
 
@@ -395,15 +395,15 @@ export type Product = {
     _type: "Video";
     _key: string;
   }>;
-  description?: Array<{
+  content?: Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
     }>;
-    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
-    listItem?: "bullet" | "number";
+    style?: "normal" | "introduction" | "small" | "blockquote";
+    listItem?: never;
     markDefs?: Array<{
       href?: string;
       _type: "link";
@@ -413,7 +413,6 @@ export type Product = {
     _type: "block";
     _key: string;
   }>;
-  content?: Content;
   slug?: Slug;
 };
 
@@ -465,15 +464,15 @@ export type Content = {
     _key: string;
   } | ({
     _key: string;
-  } & ImageGroup) | ({
+  } & ArbitraryEmbed) | ({
     _key: string;
   } & Slideshow) | ({
     _key: string;
+  } & ImageGroup) | ({
+    _key: string;
   } & Video) | ({
     _key: string;
-  } & Audio) | ({
-    _key: string;
-  } & ArbitraryEmbed)>;
+  } & Audio)>;
 };
 
 export type Banner = {
@@ -578,15 +577,15 @@ export type Article = {
   };
   preview?: Array<({
     _key: string;
+  } & Slideshow) | ({
+    _key: string;
+  } & TextOnly) | ({
+    _key: string;
   } & SingleImage) | ({
     _key: string;
   } & ImageGroup) | ({
     _key: string;
-  } & VideoLoop) | ({
-    _key: string;
-  } & Slideshow) | ({
-    _key: string;
-  } & TextOnly)>;
+  } & VideoLoop)>;
   previewColors?: PreviewColors;
   content?: Array<{
     children?: Array<{
@@ -618,17 +617,17 @@ export type Article = {
     _key: string;
   } | ({
     _key: string;
-  } & ImageGroup) | ({
-    _key: string;
   } & Slideshow) | ({
+    _key: string;
+  } & ArbitraryEmbed) | ({
+    _key: string;
+  } & ImageGroup) | ({
     _key: string;
   } & Video) | ({
     _key: string;
   } & VideoLoop) | ({
     _key: string;
-  } & Audio) | ({
-    _key: string;
-  } & ArbitraryEmbed)>;
+  } & Audio)>;
   related?: Array<{
     _ref: string;
     _type: "reference";

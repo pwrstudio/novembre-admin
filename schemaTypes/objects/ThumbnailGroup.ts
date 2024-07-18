@@ -1,5 +1,4 @@
 import { MdApps } from "react-icons/md"
-import { ImageGroupPreview } from '../../components/ImageGroupPreview'
 
 export default {
     type: 'object',
@@ -7,7 +6,6 @@ export default {
     title: 'Small images',
     description: 'Show group of small images',
     icon: MdApps,
-    // validation: (Rule: any) => Rule.max(4),
     fields: [
         {
             title: 'Images',
@@ -39,12 +37,5 @@ export default {
         },
 
     ],
-    // preview: {
-    //     select: {
-    //         images: 'images',
-    //         backgroundColor: 'backgroundColor'
-    //     },
-    //     component: ImageGroupPreview
-    // },
 }
 

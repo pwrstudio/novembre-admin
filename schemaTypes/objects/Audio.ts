@@ -1,5 +1,4 @@
 import { MdVolumeUp } from "react-icons/md"
-import { AudioPreview } from '../../components/AudioPreview'
 
 export default {
     type: 'object',
@@ -48,9 +47,6 @@ export default {
             type: 'boolean'
         },
     ],
-    component: {
-        preview: AudioPreview
-    },
     preview: {
         select: {
             audio: 'audio',

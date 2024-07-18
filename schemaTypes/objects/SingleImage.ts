@@ -1,5 +1,4 @@
 import { MdPhotoSizeSelectActual } from "react-icons/md"
-import { SingleImagePreview } from '../../components/SingleImagePreview'
 
 export default {
     type: 'object',
@@ -59,9 +58,6 @@ export default {
             type: 'color',
         }
     ],
-    component: {
-        preview: SingleImagePreview
-    },
     preview: {
         select: {
             image: 'image',

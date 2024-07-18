@@ -1,6 +1,5 @@
 // ICONS
 import { MdRepeat } from "react-icons/md"
-import { VideoPreview } from '../../components/VideoPreview'
 
 export default {
     type: 'object',
@@ -60,9 +59,6 @@ export default {
             type: 'color',
         },
     ],
-    component: {
-        preview: VideoPreview
-    },
     preview: {
         select: {
             video: 'video',
