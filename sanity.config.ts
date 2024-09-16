@@ -22,7 +22,8 @@ export default defineConfig({
         newDocumentOptions: (prev, { creationContext }) => {
             const { type } = creationContext;
             const DISABLED_TYPES = [
-                'meta'
+                'meta',
+                'productList'
             ];
             if (type === 'global') {
                 return prev.filter((template) => !DISABLED_TYPES.includes(template.templateId));

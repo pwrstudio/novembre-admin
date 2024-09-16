@@ -344,6 +344,25 @@ export type SatelliteSite = {
   slug?: Slug;
 };
 
+export type ProductList = {
+  _id: string;
+  _type: "productList";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  products?: Array<{
+    size?: "full" | "half" | "third";
+    product?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "product";
+    };
+    _key: string;
+  }>;
+};
+
 export type Product = {
   _id: string;
   _type: "product";

@@ -6,7 +6,8 @@ import {
     MdImportContacts,
     MdShoppingCart,
     MdMms,
-    MdFlare
+    MdFlare,
+    MdList
 } from "react-icons/md"
 
 export default (S: any) =>
@@ -33,6 +34,7 @@ export default (S: any) =>
                         .filter('taxonomy.category == "magazine"')
                         .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
                 ),
+            S.divider(),
             S.listItem()
                 .title('Bureau')
                 .icon(MdWork)
@@ -44,16 +46,7 @@ export default (S: any) =>
                     // .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
 
                 ),
-            S.listItem()
-                .title('Shop')
-                .icon(MdShoppingCart)
-                .child(
-                    S.documentList()
-                        .title('Products')
-                        .showIcons(true)
-                        .filter('_type == $type')
-                        .params({ type: 'product' })
-                ),
+            S.divider(),
             S.listItem()
                 .title('Satellites')
                 .icon(MdFlare)
@@ -73,5 +66,25 @@ export default (S: any) =>
                         .title('Stockists')
                         .filter('_type == $type')
                         .params({ type: 'banner' })
+                ),
+            S.divider(),
+            S.listItem()
+                .title("Product list")
+                .icon(MdList)
+                .child(
+                    S.editor()
+                        .id('product-list')
+                        .schemaType("productList")
+                        .documentId("product-list")
+                ),
+            S.listItem()
+                .title('Products')
+                .icon(MdShoppingCart)
+                .child(
+                    S.documentList()
+                        .title('Products')
+                        .showIcons(true)
+                        .filter('_type == $type')
+                        .params({ type: 'product' })
                 ),
         ]);

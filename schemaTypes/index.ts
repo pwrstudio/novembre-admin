@@ -2,6 +2,7 @@ import Article from './Article'
 import Banner from './Banner'
 import Meta from './Meta'
 import Product from './Product'
+import ProductList from './ProductList'
 import SatelliteSite from './SatelliteSite'
 import ArbitraryEmbed from './objects/ArbitraryEmbed'
 import Audio from './objects/Audio'
@@ -24,6 +25,7 @@ export const schemaTypes = [
     Banner,
     Meta,
     Product,
+    ProductList,
     SatelliteSite,
     ArbitraryEmbed,
     Audio,
