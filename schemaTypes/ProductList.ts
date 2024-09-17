@@ -48,14 +48,14 @@ export default {
                 preview: {
                     select: {
                         title: 'product.title',
-                        // size: 'size',
+                        size: 'size',
                         image: 'product.mainImage'
                     },
                     prepare(selection: any) {
                         const { title, size, image } = selection
                         return {
                             title: title,
-                            subtitle: size,
+                            subtitle: size.charAt(0).toUpperCase() + size.slice(1),
                             media: image
                         }
                     }
