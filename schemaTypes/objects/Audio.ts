@@ -1,15 +1,22 @@
 import { MdVolumeUp } from "react-icons/md"
+import { AudioPreview } from "../../components/AudioPreview"
 
 export default {
     type: 'object',
     name: 'audio',
     title: 'Audio',
     icon: MdVolumeUp,
+    components: {
+        preview: AudioPreview
+    }, 
     fields: [
         {
             title: 'Audio',
             name: 'audio',
-            type: 'file'
+            type: 'file',
+            options: {
+                accept: 'audio/*'
+            }
         },
         {
             title: 'Title',
@@ -50,7 +57,15 @@ export default {
     preview: {
         select: {
             audio: 'audio',
-            backgroundColor: 'backgroundColor'
+            backgroundColor: 'backgroundColor',
+        },
+        prepare(selection) {
+            const { audio, backgroundColor } = selection
+            return {
+                title: 'Audio',
+                audio: audio,
+                backgroundColor // You can pass additional data here if needed
+            }
         },
     }
 }

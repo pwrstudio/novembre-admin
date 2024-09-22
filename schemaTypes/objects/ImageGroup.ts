@@ -1,4 +1,5 @@
 import { MdPhotoAlbum } from "react-icons/md"
+import { ImageGroupPreview } from "../../components/ImageGroupPreview"
 
 export default {
     type: 'object',
@@ -6,6 +7,9 @@ export default {
     title: 'Image(s)',
     description: 'Show up to four images in a horizontal layout',
     icon: MdPhotoAlbum,
+    components: {
+        preview: ImageGroupPreview
+    }, 
     fields: [
         {
             title: 'Images',
@@ -72,6 +76,15 @@ export default {
         select: {
             images: 'images',
             backgroundColor: 'backgroundColor'
+        },
+        prepare(selection) {
+            const { images, backgroundColor } = selection
+            return {
+                title: 'Image Group',
+                images: images,
+                media: images && images[0], // Display the first image in the preview as the media
+                backgroundColor // You can pass additional data here if needed
+            }
         },
     },
 }

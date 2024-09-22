@@ -1,11 +1,5 @@
-import { defineArrayMember } from 'sanity'
 import { smallText, normalText, introductionText, interviewQuestion } from '../editor'
 import striptags from 'striptags'
-import { ImageGroupPreview } from '../components/ImageGroupPreview'
-import { AudioPreview } from '../components/AudioPreview'
-import { VideoPreview } from '../components/VideoPreview'
-
-import { SingleImagePreview } from '../components/SingleImagePreview'
 
 export default {
   title: 'Article',
@@ -97,26 +91,12 @@ export default {
         {
           type: 'singleImage',
         },
-        defineArrayMember({
-          type: 'imageGroup',
-          components: {
-            block: (props) => {
-              return (
-                <ImageGroupPreview {...props} />
-              )
-            },
-          }
-        }),
-        defineArrayMember({
+        {
+          type: 'imageGroup'
+        },
+        {
           type: 'videoLoop',
-          components: {
-            block: (props) => {
-              return (
-                <VideoPreview {...props} />
-              )
-            },
-          }
-        }),
+        },
       ],
       validation: (Rule: any) => Rule.length(1)
     },
@@ -181,46 +161,18 @@ export default {
         {
           type: 'arbitraryEmbed'
         },
-        defineArrayMember({
+        {
           type: 'imageGroup',
-          components: {
-            block: (props) => {
-              return (
-                <ImageGroupPreview {...props} />
-              )
-            },
-          }
-        }),
-        defineArrayMember({
+        },
+        {
           type: 'video',
-          components: {
-            block: (props) => {
-              return (
-                <VideoPreview {...props} />
-              )
-            },
-          }
-        }),
-        defineArrayMember({
+        },
+        {
           type: 'videoLoop',
-          components: {
-            block: (props) => {
-              return (
-                <VideoPreview {...props} />
-              )
-            },
-          }
-        }),
-        defineArrayMember({
+        },
+        {
           type: 'audio',
-          components: {
-            block: (props) => {
-              return (
-                <AudioPreview {...props} />
-              )
-            },
-          }
-        }),
+        },
       ]
     },
     // RELATED ARTICLES

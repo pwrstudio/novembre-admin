@@ -52,33 +52,12 @@ export default defineField({
                 }),
                 defineArrayMember({
                     type: 'imageGroup',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <ImageGroupPreview {...props} />
-                            )
-                        },
-                    }
                 }),
                 defineArrayMember({
                     type: 'video',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <VideoPreview {...props} />
-                            )
-                        },
-                    }
                 }),
                 defineArrayMember({
                     type: 'audio',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <AudioPreview {...props} />
-                            )
-                        },
-                    }
                 }),
             ]
         },

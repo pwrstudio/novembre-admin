@@ -1,16 +1,22 @@
-// ICONS
 import { MdRepeat } from "react-icons/md"
+import { VideoPreview }  from '../../components/VideoPreview'
 
 export default {
     type: 'object',
     name: 'videoLoop',
     title: 'Video clip',
     icon: MdRepeat,
+    components: {
+        preview: VideoPreview
+    },
     fields: [
         {
             title: 'Video',
             name: 'video',
-            type: 'file'
+            type: 'file',
+            options: {
+                accept: 'video/*'
+            }
         },
         {
             title: 'Poster image',
@@ -63,6 +69,14 @@ export default {
         select: {
             video: 'video',
             backgroundColor: 'backgroundColor'
+        },
+        prepare(selection) {
+            const { video, backgroundColor } = selection
+            return {
+                title: 'Video loop',
+                video: video,
+                backgroundColor
+            }
         },
     }
 }

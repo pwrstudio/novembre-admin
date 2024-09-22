@@ -1,9 +1,3 @@
-import { defineArrayMember } from 'sanity'
-import { ImageGroupPreview } from '../components/ImageGroupPreview'
-import { AudioPreview } from '../components/AudioPreview'
-import { VideoPreview } from '../components/VideoPreview'
-
-
 export default {
     title: 'Satellite site',
     name: 'satelliteSite',
@@ -185,56 +179,21 @@ export default {
                 {
                     type: 'map',
                 },
-                defineArrayMember({
-                    type: 'thumbnailGroup',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <ImageGroupPreview {...props} />
-                            )
-                        },
-                    }
-                }),
-                defineArrayMember({
+                {
+                    type: 'thumbnailGroup'
+                },
+                {
                     type: 'imageGroup',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <ImageGroupPreview {...props} />
-                            )
-                        },
-                    }
-                }),
-                defineArrayMember({
+                },
+                {
                     type: 'video',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <VideoPreview {...props} />
-                            )
-                        },
-                    }
-                }),
-                defineArrayMember({
+                },
+                {
                     type: 'videoLoop',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <VideoPreview {...props} />
-                            )
-                        },
-                    }
-                }),
-                defineArrayMember({
+                },
+                {
                     type: 'audio',
-                    components: {
-                        block: (props) => {
-                            return (
-                                <AudioPreview {...props} />
-                            )
-                        },
-                    }
-                }),
+                },
             ]
         },
         {

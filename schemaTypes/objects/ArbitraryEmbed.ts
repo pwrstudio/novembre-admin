@@ -14,12 +14,4 @@ export default {
             type: 'text'
         },
     ]
-    // preview: {
-    //     select: {
-    //         url: 'url',
-    //         caption: 'caption',
-    //         attribution: 'attribution'
-    //     },
-    //     component: EmbedPreview
-    // }
 }

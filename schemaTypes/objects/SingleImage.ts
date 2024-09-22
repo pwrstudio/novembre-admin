@@ -60,6 +60,7 @@ export default {
     ],
     preview: {
         select: {
+            title: 'Single image',
             image: 'image',
             caption: 'caption',
             alignment: 'alignment',

@@ -1,12 +1,9 @@
-// ICONS
-import {
-    MdVideocam
-} from "react-icons/md"
+import { MdVideocam } from "react-icons/md"
 
 export default {
     type: 'object',
     name: 'video',
-    title: 'Embeded video',
+    title: 'Embedded video',
     icon: MdVideocam,
     fields: [
         {
@@ -36,5 +33,16 @@ export default {
             name: 'backgroundColor',
             type: 'color',
         }
-    ]
+    ],
+    preview: {
+        select: {
+            url: 'video',
+        },
+        prepare(selection) {
+            const { url } = selection
+            return {
+                title: url
+            }
+        },
+    }
 }
