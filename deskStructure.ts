@@ -32,7 +32,7 @@ export default (S: any) =>
                         .title('Magazine articles')
                         .showIcons(true)
                         .filter('taxonomy.category == "magazine"')
-                        .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
+                        .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
                 ),
             S.divider(),
             S.listItem()
@@ -43,8 +43,7 @@ export default (S: any) =>
                         .title('Bureau articles')
                         .showIcons(true)
                         .filter('taxonomy.category == "bureau"')
-                    // .defaultOrdering([{ field: 'publicationDate', direction: 'desc' }])
-
+                        .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
                 ),
             S.divider(),
             S.listItem()
@@ -56,6 +55,7 @@ export default (S: any) =>
                         .showIcons(true)
                         .filter('_type == $type')
                         .params({ type: 'satelliteSite' })
+                        .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
                 ),
             S.divider(),
             S.listItem()
@@ -86,5 +86,6 @@ export default (S: any) =>
                         .showIcons(true)
                         .filter('_type == $type')
                         .params({ type: 'product' })
+                        .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
                 ),
         ]);
