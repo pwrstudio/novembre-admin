@@ -91,6 +91,11 @@ export default {
             type: 'color'
         },
         {
+            title: 'Shop placeholder image',
+            name: 'shopPlaceholderImage',
+            type: 'image'
+        },
+        {
             title: 'Show mailing list sign-up overlay',
             name: 'showMailingListOverlay',
             type: 'boolean'
