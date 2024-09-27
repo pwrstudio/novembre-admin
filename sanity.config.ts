@@ -4,6 +4,7 @@ import { colorInput } from '@sanity/color-input'
 import { googleMapsInput } from '@sanity/google-maps-input'
 import { schemaTypes } from './schemaTypes'
 import deskStructure from './deskStructure'
+import { PreviewAction } from './actions'
 
 export default defineConfig({
     name: 'default',
@@ -30,7 +31,9 @@ export default defineConfig({
             }
             return prev;
         },
+        actions: [PreviewAction]
     },
+
 
     schema: {
         types: schemaTypes,
