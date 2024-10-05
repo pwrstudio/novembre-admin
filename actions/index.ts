@@ -20,7 +20,7 @@ export function PreviewAction(props) {
           return
         }
 
-        const previewUrl = `https://preview--novembre.netlify.app/${category}/${slug}`
+        const previewUrl = `https://preview.novembre.global/${category}/${slug}`
         window.open(previewUrl, '_blank', 'noopener,noreferrer')
       }    
     } 
