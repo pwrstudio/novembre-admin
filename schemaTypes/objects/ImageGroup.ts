@@ -36,7 +36,7 @@ export default {
             type: 'url'
         },
         {
-            title: 'Alignment',
+            title: 'Horizontal alignment',
             name: 'alignment',
             type: 'string',
             options: {
@@ -44,6 +44,18 @@ export default {
                     { title: 'Left', value: 'left' },
                     { title: 'Center', value: 'center' },
                     { title: 'Right', value: 'right' }
+                ]
+            }
+        },
+        {
+            title: 'Vertical alignment',
+            name: 'verticalAlignment',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Center', value: 'vertical-center' },
+                    { title: 'Top', value: 'vertical-top' },
+                    { title: 'Bottom', value: 'vertical-bottom' }
                 ]
             }
         },

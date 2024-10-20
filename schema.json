@@ -1021,6 +1021,27 @@
           },
           "optional": true
         },
+        "verticalAlignment": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "vertical-center"
+              },
+              {
+                "type": "string",
+                "value": "vertical-top"
+              },
+              {
+                "type": "string",
+                "value": "vertical-bottom"
+              }
+            ]
+          },
+          "optional": true
+        },
         "fullwidth": {
           "type": "objectAttribute",
           "value": {
