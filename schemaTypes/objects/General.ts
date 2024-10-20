@@ -15,7 +15,7 @@ export default {
                     { title: 'Bureau', value: 'bureau' }
                 ]
             },
-            validation: (Rule: any) => Rule.required()
+            validation: (Rule) => Rule.required().error('Category is required.')
         },
         {
             title: 'Subcategory',
