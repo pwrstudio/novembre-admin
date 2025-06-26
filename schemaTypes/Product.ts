@@ -25,6 +25,42 @@ export default {
             type: 'string',
         },
         {
+            title: 'Pre-order item',
+            name: 'preOrderItem',
+            type: 'boolean',
+        },
+        {
+            title: 'Pre-order text',
+            name: 'preOrderText',
+            type: 'array',
+            description: 'This will be displayed on the product page if the product is a pre-order item',
+            of: [
+                {
+                    type: 'block',
+                    styles: [
+                        { title: 'Normal', value: 'normal' }
+                    ],
+                    lists: [],
+                    marks: {
+                        decorators: [
+                            { title: 'Emphasis', value: 'em' },
+                            { title: 'Strong', value: 'strong' }
+                        ],
+                        annotations: [
+                            {
+                                type: 'object',
+                                name: 'link',
+                                fields: [
+                                    { name: 'href', type: 'string', title: 'Url', validation: (Rule: any) => Rule.required() }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            hidden: ({ parent }: any) => !parent.preOrderItem
+        },
+        {
             title: 'Shopify ID',
             name: 'shopifyId',
             type: 'string'
@@ -118,16 +154,17 @@ export default {
     preview: {
         select: {
             title: 'title',
+            subtitle: 'subtitle',
             image: 'mainImage',
             editorialState: 'editorialState'
         },
         prepare(selection) {
-            const { title, date, image, editorialState } = selection
-            const formattedDate = date ? date.substring(0, 10) : 'No date set'
+            const { title, subtitle, image, editorialState } = selection
+
+            const subtitleText = subtitle ? `${subtitle} - ` : ''
             return {
                 title: title,
-                description: formattedDate,
-                subtitle: editorialState.toUpperCase(),
+                subtitle: `${subtitleText}${editorialState.toUpperCase()}`,
                 media: image
             }
         }
