@@ -20,6 +20,11 @@ export default {
             validation: (Rule: any) => Rule.required()
         },
         {
+            title: 'Subtitle',
+            name: 'subtitle',
+            type: 'string',
+        },
+        {
             title: 'Shopify ID',
             name: 'shopifyId',
             type: 'string'
