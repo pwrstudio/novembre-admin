@@ -30,6 +30,12 @@ export default {
             type: 'boolean'
         },
         {
+            title: 'No crop on phone (header only)',
+            description: 'When used as an article header, show the whole image on phones (full width, natural height) instead of cropping it.',
+            name: 'noCropOnPhone',
+            type: 'boolean'
+        },
+        {
             title: 'Alignment',
             name: 'alignment',
             type: 'string',
