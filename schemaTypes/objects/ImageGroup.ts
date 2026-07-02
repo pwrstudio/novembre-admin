@@ -66,6 +66,12 @@ export default {
             type: 'boolean'
         },
         {
+            title: 'No crop on phone (header only)',
+            description: 'When used as an article header, show the whole images at their natural height on phones instead of cropping them into a landscape strip.',
+            name: 'noCropOnPhone',
+            type: 'boolean'
+        },
+        {
             title: 'Limit height',
             description: "in percentage of window height",
             name: 'maxHeight',
